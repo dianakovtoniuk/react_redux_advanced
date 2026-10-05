@@ -1,7 +1,13 @@
 import { Fragment } from 'react';
+import type { ReactNode } from 'react';
+
 import MainHeader from './MainHeader';
 
-const Layout = (props) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = (props: LayoutProps) => {
   return (
     <Fragment>
       <MainHeader />

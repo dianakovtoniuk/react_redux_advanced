@@ -1,6 +1,13 @@
+import type { ReactNode } from 'react';
+
 import classes from './Card.module.css';
 
-const Card = (props) => {
+interface CardProps {
+  className?: string;
+  children: ReactNode;
+}
+
+const Card = (props: CardProps) => {
   return (
     <section
       className={`${classes.card} ${props.className ? props.className : ''}`}
